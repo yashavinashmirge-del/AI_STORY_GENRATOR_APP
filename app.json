@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "AI_STORY_GENRATOR_APP",
-    "slug": "AI_STORY_GENRATOR_APP",
+    "name": "ai-story-generator",
+    "slug": "ai-story-generator",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "aistorygenratorapp",
+    "scheme": "aistorygenerator",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
@@ -22,7 +22,7 @@
       "predictiveBackGestureEnabled": false
     },
     "web": {
-      "output": "static",
+      "output": "server",
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
