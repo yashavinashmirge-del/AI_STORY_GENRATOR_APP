@@ -1,50 +1,103 @@
-# Welcome to your Expo app 👋
+# AI Story Generator 📖✨
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+An AI-powered mobile app built with [Expo](https://expo.dev) and [React Native](https://reactnative.dev) that generates creative stories on the fly using AI models via [OpenRouter](https://openrouter.ai).
 
-## Get started
+## Features
 
-1. Install dependencies
+- 🤖 AI-generated stories powered by the [Vercel AI SDK](https://sdk.vercel.ai) and OpenRouter
+- 📱 Cross-platform: runs on iOS, Android, and Web
+- 🧭 File-based navigation with [Expo Router](https://docs.expo.dev/router/introduction/)
+- 💾 Local persistence with `@react-native-async-storage/async-storage`
+- 🎨 Clean UI with `lucide-react-native` icons and Expo's vector icon set
+- ✅ Runtime validation with [Zod](https://zod.dev)
 
-   ```bash
-   npm install
-   ```
+## Tech Stack
 
-2. Start the app
+| Category | Technology |
+|---|---|
+| Framework | Expo (SDK 54), React Native 0.81 |
+| Language | TypeScript |
+| Navigation | Expo Router, React Navigation |
+| AI | `ai` SDK, `@ai-sdk/react`, `@openrouter/ai-sdk-provider` |
+| Storage | AsyncStorage |
+| Validation | Zod |
 
-   ```bash
-   npx expo start
-   ```
+## Project Structure
 
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```
+AI_STORY_GENRATOR_APP/
+├── app/              # App screens & routes (Expo Router file-based routing)
+├── assets/images/    # App images and icons
+├── constant/         # Shared constants/config
+├── lib/              # Utility and helper functions
+├── app.json          # Expo app configuration
+├── package.json      # Dependencies and scripts
+└── tsconfig.json     # TypeScript configuration
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Getting Started
 
-## Learn more
+### Prerequisites
 
-To learn more about developing your project with Expo, look at the following resources:
+- [Node.js](https://nodejs.org/) (LTS recommended)
+- npm or [bun](https://bun.sh/) (a `bun.lock` file is included)
+- An [OpenRouter](https://openrouter.ai/) API key
+- The [Expo Go](https://expo.dev/go) app (optional, for quick testing on a physical device)
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### Installation
 
-## Join the community
+1. Clone the repository
 
-Join our community of developers creating universal apps.
+   ```bash
+   git clone https://github.com/yashavinashmirge-del/AI_STORY_GENRATOR_APP.git
+   cd AI_STORY_GENRATOR_APP
+   ```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+2. Install dependencies
+
+   ```bash
+   npm install/bun install
+   ```
+
+3. Set up environment variables
+
+   Create a `.env` file in the project root and add your OpenRouter API key:
+
+   ```env
+   OPENROUTER_API_KEY=your_api_key_here
+   ```
+
+4. Start the development server
+
+   ```bash
+   npx expo start/ bunx expo start
+   ```
+
+   From the output, you can open the app in:
+   - a [development build](https://docs.expo.dev/develop/development-builds/introduction/)
+   - an Android emulator
+   - an iOS simulator
+   - [Expo Go](https://expo.dev/go)
+
+### Available Scripts
+
+| Script | Description |
+|---|---|
+| `npm start` | Start the Expo development server |
+| `npm run android` | Start the app on an Android emulator/device |
+| `npm run ios` | Start the app on an iOS simulator/device |
+| `npm run web` | Start the app in a web browser |
+| `npm run lint` | Run ESLint |
+| `npm run reset-project` | Reset to a blank starter project |
+
+## How It Works
+
+The app sends a user prompt (genre, characters, theme, etc.) to an AI model through OpenRouter using the Vercel AI SDK, then streams back and displays a generated story within the app.
+
+## Contributing
+
+Contributions are welcome! Feel free to open an issue or submit a pull request.
+
+## License
+
+This project currently has no license specified. Contact the repository owner for usage terms.
