@@ -98,6 +98,3 @@ The app sends a user prompt (genre, characters, theme, etc.) to an AI model thro
 
 Contributions are welcome! Feel free to open an issue or submit a pull request.
 
-## License
-
-This project currently has no license specified. Contact the repository owner for usage terms.
